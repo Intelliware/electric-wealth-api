@@ -1,0 +1,34 @@
+# Optional overrides go in .env (copy .env.example): PORT, DB_PATH, CORS_ORIGINS.
+spring:
+  application:
+    name: electric-wealth-api-spring
+  config:
+    import: optional:file:.env[.properties]
+  jackson:
+    # Absent optional fields are left out of the JSON, like the Node API (which converts SQL NULL to undefined).
+    # Fields that are genuinely nullable opt back in with @JsonInclude(ALWAYS).
+    default-property-inclusion: non_null
+  autoconfigure:
+    # Auth is our own bearer-token filter; stop Boot creating a default user with a generated password.
+    exclude: org.springframework.boot.security.autoconfigure.UserDetailsServiceAutoConfiguration
+  datasource:
+    hikari:
+      maximum-pool-size: 4
+
+server:
+  port: ${PORT:4200}
+
+ew:
+  # Relative paths resolve against the directory the app is started from (this repo's root).
+  db-path: ${DB_PATH:../electric-wealth-db/data/electric-wealth.db}
+  cors-origins: ${CORS_ORIGINS:http://localhost:5173}
+  log-requests: true
+  rate-limit-per-minute: 300
+
+springdoc:
+  api-docs:
+    path: /openapi.json
+    version: openapi_3_1
+  swagger-ui:
+    path: /docs
+  default-produces-media-type: application/json
