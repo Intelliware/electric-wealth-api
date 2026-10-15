@@ -47,7 +47,7 @@ public final class RegistrationDtos {
     }
 
     public record VerifyIdentityResponse(
-            @Schema(allowableValues = "true") boolean verified,
+            boolean verified,
             @Schema(description = "The client name on file, to confirm the right record was found") String name) {
     }
 
@@ -89,12 +89,12 @@ public final class RegistrationDtos {
 
     /** Every consent must be given (true). */
     public record Consents(
-            @NotNull @AssertTrue @Schema(allowableValues = "true") Boolean terms,
-            @NotNull @AssertTrue @Schema(allowableValues = "true") Boolean privacy,
-            @NotNull @AssertTrue @Schema(allowableValues = "true") Boolean electronicDelivery) {
+            @NotNull @AssertTrue Boolean terms,
+            @NotNull @AssertTrue Boolean privacy,
+            @NotNull @AssertTrue Boolean electronicDelivery) {
     }
 
-    public record StepSavedResponse(@Schema(allowableValues = "true") boolean saved) {
+    public record StepSavedResponse(boolean saved) {
 
         public static final StepSavedResponse SAVED = new StepSavedResponse(true);
     }

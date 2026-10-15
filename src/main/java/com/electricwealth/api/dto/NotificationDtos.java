@@ -19,7 +19,7 @@ public final class NotificationDtos {
             boolean read) {
     }
 
-    public record NotificationReadResponse(String id, @Schema(allowableValues = "true") boolean read) {
+    public record NotificationReadResponse(String id, boolean read) {
     }
 
     public record NotificationsReadAllResponse(

@@ -3083,8 +3083,7 @@
         "type" : "object",
         "properties" : {
           "verified" : {
-            "type" : "boolean",
-            "enum" : [ "true" ]
+            "type" : "boolean"
           },
           "name" : {
             "type" : "string",
@@ -3126,8 +3125,7 @@
         "type" : "object",
         "properties" : {
           "saved" : {
-            "type" : "boolean",
-            "enum" : [ "true" ]
+            "type" : "boolean"
           }
         },
         "required" : [ "saved" ]
@@ -3197,16 +3195,13 @@
         "type" : "object",
         "properties" : {
           "terms" : {
-            "type" : "boolean",
-            "enum" : [ "true" ]
+            "type" : "boolean"
           },
           "privacy" : {
-            "type" : "boolean",
-            "enum" : [ "true" ]
+            "type" : "boolean"
           },
           "electronicDelivery" : {
-            "type" : "boolean",
-            "enum" : [ "true" ]
+            "type" : "boolean"
           }
         },
         "required" : [ "electronicDelivery", "privacy", "terms" ]
@@ -3263,8 +3258,7 @@
             "type" : "string"
           },
           "read" : {
-            "type" : "boolean",
-            "enum" : [ "true" ]
+            "type" : "boolean"
           }
         },
         "required" : [ "id", "read" ]

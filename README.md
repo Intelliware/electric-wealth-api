@@ -1,10 +1,8 @@
 # electric-wealth-api-spring
 
-A Spring Boot version of [electric-wealth-api](../electric-wealth-api), built for learning and demos. It has the same
-REST contract and uses the same SQLite database, so the web app works with either API.
+A Spring Boot REST API for Electric Wealth, using the shared SQLite database and serving the web app.
 
-**Status:** complete. All 49 endpoints are ported, the OpenAPI contract matches the Node API's, and every test from the
-Node API's `test/app.test.ts` has a Java equivalent.
+**Status:** complete. The API includes 49 endpoints and a committed OpenAPI contract.
 
 ## Getting started
 
@@ -16,12 +14,11 @@ Prerequisites:
   Maven Central, so behind a corporate firewall you need either access to it or an internal mirror (Nexus or
   Artifactory) configured in `~/.m2/settings.xml`.
 
-Clone the repos side by side:
+Clone the database, API and web app repos side by side:
 
 ```
 some-folder/
   electric-wealth-db/
-  electric-wealth-api/          (Node API, port 4100)
   electric-wealth-api-spring/   (this repo, port 4200)
   electric-wealth-web/
 ```
@@ -45,16 +42,10 @@ Optional settings go in `.env` (copy `.env.example`): `PORT`, `DB_PATH`, `CORS_O
 
 ## Using it from the web app
 
-The web app sends `/api` requests to its Vite dev server, which forwards them to `API_URL`. In
-`electric-wealth-web/.env`:
+The web app sends `/api` requests to its Vite dev server, which forwards them to `API_URL`. The default is
+`http://localhost:4200`; set that value in `electric-wealth-web/.env` if you need to override it.
 
-```
-API_URL=http://localhost:4200   # this API
-API_URL=http://localhost:4100   # the Node API (the default)
-```
-
-Restart `npm run dev` after changing it. Both APIs can run at the same time against the same database, and a session
-started on one is valid on the other.
+Restart `npm run dev` after changing it.
 
 ## Commands
 
