@@ -18,7 +18,7 @@ the Part B2 files in `<KB>/source-docs/electric-wealth-api-spring/api-consumer/`
 
 | Item | Value |
 |---|---|
-| Repo path | `/Users/kosta/repos/em/ElectricWeatlhParent/electric-wealth-api-spring` |
+| Repo path | `electric-wealth-api-spring` |
 | Monorepo | No (single Maven module) |
 | Included | `src/main/**`, `src/test/**`, `pom.xml`, `README.md`, `.env.example`, `openapi.json` |
 | Excluded | `target/`, `.mvn/` |
@@ -26,7 +26,7 @@ the Part B2 files in `<KB>/source-docs/electric-wealth-api-spring/api-consumer/`
 | Consumer profile | `internal-app` (backend for `electric-wealth-web`) |
 | Entry points | `ElectricWealthApplication` (server start); 12 `@RestController` classes under `web/` (HTTP routers) |
 | Existing docs | `README.md`, `openapi.json` (committed, springdoc-generated, OpenAPI 3.1.0) |
-| KB root | `/Users/kosta/repos/em/ElectricWeatlhParent/electric-wealth-knowledge-base` |
+| KB root | `electric-wealth-knowledge-base` |
 
 ## Decision gates (composition `include-if` flags)
 

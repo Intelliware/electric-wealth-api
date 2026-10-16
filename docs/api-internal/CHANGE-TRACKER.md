@@ -31,7 +31,7 @@ that source version.
 | B2 | Part B2 — `<KB>/source-docs/electric-wealth-api-spring/api-consumer/` |
 | All | A, B1 and B2 |
 
-KB root: `/Users/kosta/repos/em/ElectricWeatlhParent/electric-wealth-knowledge-base`.
+KB root: `electric-wealth-knowledge-base`.
 
 ### Change Types
 
