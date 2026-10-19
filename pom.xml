@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.electricwealth</groupId>
-	<artifactId>electric-wealth-api-spring</artifactId>
+	<artifactId>electric-wealth-api</artifactId>
 	<version>0.1.0</version>
-	<name>electric-wealth-api-spring</name>
+	<name>electric-wealth-api</name>
 	<description>Electric Wealth REST API (Spring Boot), a port of electric-wealth-api backed by the electric-wealth-db SQLite database.</description>
 
 	<properties>

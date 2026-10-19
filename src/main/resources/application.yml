@@ -1,7 +1,7 @@
 # Optional overrides go in .env (copy .env.example): PORT, DB_PATH, CORS_ORIGINS.
 spring:
   application:
-    name: electric-wealth-api-spring
+    name: electric-wealth-api
   config:
     import: optional:file:.env[.properties]
   jackson:

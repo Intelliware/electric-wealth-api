@@ -1,4 +1,4 @@
-# electric-wealth-api-spring
+# electric-wealth-api
 
 A Spring Boot REST API for Electric Wealth, using the shared SQLite database and serving the web app.
 
@@ -19,7 +19,7 @@ Clone the database, API and web app repos side by side:
 ```
 some-folder/
   electric-wealth-db/
-  electric-wealth-api-spring/   (this repo, port 4200)
+  electric-wealth-api/          (this repo, port 4200)
   electric-wealth-web/
 ```
 
@@ -29,7 +29,7 @@ cd ../electric-wealth-db
 npm run db:reset
 
 # 2. Run the API
-cd ../electric-wealth-api-spring
+cd ../electric-wealth-api
 ./mvnw spring-boot:run
 ```
 
@@ -54,7 +54,7 @@ Restart `npm run dev` after changing it.
 | `./mvnw spring-boot:run` | Start the API | `npm run dev` |
 | `./mvnw test` | Run the tests, including the contract checks | `npm run verify` |
 | `./mvnw test -Dtest=OpenApiSpecTest -Dopenapi.write=true` | Regenerate `openapi.json` | `npm run gen:openapi` |
-| `./mvnw package` then `java -jar target/electric-wealth-api-spring-0.1.0.jar` | Build and run a standalone jar | `npm run build` / `npm start` |
+| `./mvnw package` then `java -jar target/electric-wealth-api-0.1.0.jar` | Build and run a standalone jar | `npm run build` / `npm start` |
 
 The tests build their own copy of the database with `electric-wealth-db`'s reset script, so they never touch your
 data. They need `node` on the `PATH`.
